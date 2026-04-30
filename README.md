@@ -19,21 +19,7 @@ It combines:
 5. 👥 Speaker-based filtering (optional)
 6. ⚡ Fast retrieval using vector databases
 
-🏗️ Architecture
 
-flowchart TD
-```mermaid
-flowchart TD
-    A[Meeting Transcripts] --> B[Text Chunking]
-    B --> C[BERT Embeddings]
-    C --> D[Vector Database (FAISS/Chroma)]
-    D --> E[Retriever]
-
-    Q[User Query] --> E
-    E --> F[Relevant Chunks]
-    F --> G[Open Source LLM (LLaMA/Mistral)]
-    G --> H[Final Answer]
-```
 
 ⚙️ Tech Stack
 | Component    | Technology                   |
@@ -57,7 +43,8 @@ flowchart TD
 
 🔧 Installation
 git clone https://github.com/bishal-bit/RAG-Driven-Meeting-Intelligence-System-using-BERT-Embeddings-and-Open-Source-LLMs.git
-cd RAG-Driven-Meeting-Intelligence-System
+
+cd RAG-Driven-Meeting-Intelligence-System-using-BERT-Embeddings-and-Open-Source-LLMs
 
 pip install -r requirements.txt
 
