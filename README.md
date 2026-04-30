@@ -1,0 +1,2 @@
+# RAG-Driven-Meeting-Intelligence-System-using-BERT-Embeddings-and-Open-Source-LLMs
+This notebook analyzes real meeting transcripts from the **AMI Corpus** using: - **BERT embeddings** (via `sentence-transformers`) for semantic search - **FAISS** as a fast vector store - **FLAN-T5-Large** as a free, open-source generative LLM - **RAG (Retrieval-Augmented Generation)** to ground answers in transcript evidence
