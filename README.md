@@ -1,6 +1,6 @@
 <p align="center"> <b>🧠 RAG-Driven Meeting Intelligence System</b> </p>
 <p align="center"> <b>Using BERT Embeddings & Open-Source LLMs</b> </p>
-<p align="center"> <b>Transform meeting transcripts into actionable insights using Retrieval-Augmented Generation</b> </p>
+<p align="center"> <b>Transform meeting transcripts into actionable insights using Retrieval-Augmented Generation [RAG]</b> </p>
 🚀 Overview
 This project is a RAG-based intelligent meeting assistant that allows users to query meeting transcripts using natural language.
 
