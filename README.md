@@ -1,68 +1,39 @@
 🧠 RAG-Driven Meeting Intelligence System
-Using BERT Embeddings and Open-Source LLMs
-📌 Overview
-This project is an intelligent meeting analysis system built using Retrieval-Augmented Generation (RAG). It processes meeting transcripts and enables users to ask natural language questions to extract insights, summaries, and key discussions.
-The system combines:
-BERT-based embeddings for semantic understanding
+Using BERT Embeddings & Open-Source LLMs
+<p align="center"> <b>Transform meeting transcripts into actionable insights using Retrieval-Augmented Generation</b> </p>
+🚀 Overview
+This project is a RAG-based intelligent meeting assistant that allows users to query meeting transcripts using natural language.
+It combines:
+BERT embeddings for semantic understanding
 Vector search for efficient retrieval
-Open-source LLMs for contextual answer generation
-🚀 Key Features
-🔍 Semantic Search over Meeting Transcripts
-💬 Natural Language Question Answering
-🧠 Context-Aware Responses using RAG Pipeline
-📄 Chunk-based Transcript Processing
-👥 Speaker-specific Filtering (optional)
-📊 Scalable Retrieval with Vector Databases
-🏗️ System Architecture
-                 ┌────────────────────────┐
-                 │   Meeting Transcripts  │
-                 └──────────┬─────────────┘
-                            │
-                            ▼
-                ┌──────────────────────┐
-                │   Text Chunking      │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  BERT Embeddings     │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  Vector Database     │
-                │ (FAISS / Chroma)     │
-                └──────────┬───────────┘
-                           │
-        ┌──────────────────┴──────────────────┐
-        │                                     │
-        ▼                                     ▼
-User Query                          Retrieved Chunks
-        │                                     │
-        └──────────────┬──────────────────────┘
-                       ▼
-            ┌──────────────────────┐
-            │   Open-Source LLM    │
-            │ (e.g., LLaMA/Mistral)│
-            └──────────┬───────────┘
-                       ▼
-                 Final Answer
+Open-source LLMs for contextual response generation
+👉 Think of it as a ChatGPT for your meetings, grounded in your own data.
+✨ Features
+🔍 Semantic search over transcripts
+💬 Natural language Q&A
+🧠 Context-aware responses (RAG pipeline)
+📄 Smart chunking of long transcripts
+👥 Speaker-based filtering (optional)
+⚡ Fast retrieval using vector databases
+🏗️ Architecture
+
+
+
 ⚙️ Tech Stack
 Component	Technology
 Embeddings	BERT / Sentence Transformers
 Vector Store	FAISS / ChromaDB
 LLM	LLaMA / Mistral / Falcon
 Backend	Python
-Frameworks	LangChain / Custom Pipeline
-Data Format	JSON / Text
+Framework	LangChain / Custom Pipeline
 📂 Project Structure
-├── data/                  # Raw and processed transcripts
-├── embeddings/           # Embedding generation scripts
-├── retriever/            # Vector search and retrieval logic
-├── llm/                  # LLM inference code
-├── rag_pipeline/         # Core RAG pipeline
+├── data/                  # Raw & processed transcripts
+├── embeddings/           # Embedding generation
+├── retriever/            # Retrieval logic
+├── llm/                  # LLM inference
+├── rag_pipeline/         # Core pipeline
 ├── utils/                # Helper functions
-├── app.py                # Main application
+├── app.py                # Entry point
 ├── requirements.txt
 └── README.md
 🔧 Installation
@@ -71,41 +42,34 @@ cd RAG-Driven-Meeting-Intelligence-System
 
 pip install -r requirements.txt
 ▶️ Usage
-1. Prepare Data
-Add meeting transcripts in /data
-Ensure proper formatting (speaker, timestamps optional)
+1. Add Transcripts
+Place meeting transcripts inside:
+/data
 2. Generate Embeddings
 python embeddings/generate_embeddings.py
 3. Run the System
 python app.py
 4. Ask Questions
-Example:
-"What decisions were made in the last meeting?"
+Example queries:
+"What decisions were made?"
 "Summarize the discussion by Speaker A"
-"What were the key risks discussed?"
-🧪 Example Workflow
+"What risks were identified?"
+🔄 Workflow
 Input meeting transcript
-System splits into chunks
-BERT converts chunks → embeddings
-Stored in vector database
-User asks a question
-Relevant chunks retrieved
-LLM generates contextual answer
-📊 Evaluation Metrics
+Chunk text into smaller segments
+Convert chunks → embeddings using BERT
+Store embeddings in vector database
+User submits query
+Retrieve top-k relevant chunks
+LLM generates final contextual answer
+📊 Evaluation
 Retrieval Accuracy (Top-K relevance)
 Answer Faithfulness
-Latency (Query → Response)
+Response Latency
 Context Recall
 🔮 Future Improvements
-📌 Real-time meeting integration (Zoom/Teams APIs)
-📌 Multi-modal support (audio + text)
-📌 Fine-tuned domain-specific LLMs
-📌 Knowledge graph integration
-📌 Personalized summaries per participant
-🤝 Contributing
-Contributions are welcome!
-Feel free to open issues or submit pull requests.
-🙌 Acknowledgements
-HuggingFace Transformers
-Open-source LLM communities
-FAISS / ChromaDB contributors
+🎥 Real-time meeting integration (Zoom / Teams APIs)
+🎙️ Speech-to-text pipeline
+🧠 Fine-tuned domain-specific LLM
+🌐 Knowledge graph integration
+👤 Personalized insights per participant
