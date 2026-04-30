@@ -3,11 +3,14 @@ Using BERT Embeddings & Open-Source LLMs
 <p align="center"> <b>Transform meeting transcripts into actionable insights using Retrieval-Augmented Generation</b> </p>
 🚀 Overview
 This project is a RAG-based intelligent meeting assistant that allows users to query meeting transcripts using natural language.
+
 It combines:
 1. BERT embeddings for semantic understanding
 2. Vector search for efficient retrieval
 3. Open-source LLMs for contextual response generation
+   
 👉 Think of it as a ChatGPT for your meetings, grounded in your own data.
+
 ✨ Features
 1. 🔍 Semantic search over transcripts
 2. 💬 Natural language Q&A
@@ -15,43 +18,23 @@ It combines:
 4. 📄 Smart chunking of long transcripts
 5. 👥 Speaker-based filtering (optional)
 6. ⚡ Fast retrieval using vector databases
+
 🏗️ Architecture
 ![Uploading mermaid-diagram.png…]()
 
 flowchart TD
-                 ┌────────────────────────┐
-                 │   Meeting Transcripts  │
-                 └──────────┬─────────────┘
-                            │
-                            ▼
-                ┌──────────────────────┐
-                │   Text Chunking      │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  BERT Embeddings     │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  Vector Database     │
-                │ (FAISS / Chroma)     │
-                └──────────┬───────────┘
-                           │
-        ┌──────────────────┴──────────────────┐
-        │                                     │
-        ▼                                     ▼
-User Query                          Retrieved Chunks
-        │                                     │
-        └──────────────┬──────────────────────┘
-                       ▼
-            ┌──────────────────────┐
-            │   Open-Source LLM    │
-            │ (e.g., LLaMA/Mistral)│
-            └──────────┬───────────┘
-                       ▼
-                 Final Answer
+```mermaid
+flowchart TD
+    A[Meeting Transcripts] --> B[Text Chunking]
+    B --> C[BERT Embeddings]
+    C --> D[Vector Database (FAISS/Chroma)]
+    D --> E[Retriever]
+
+    Q[User Query] --> E
+    E --> F[Relevant Chunks]
+    F --> G[Open Source LLM (LLaMA/Mistral)]
+    G --> H[Final Answer]
+```
 
 ⚙️ Tech Stack
 | Component    | Technology                   |
@@ -64,13 +47,13 @@ User Query                          Retrieved Chunks
 | Data Format  | JSON / Text                  |
 
 📂 Project Structure
-├── data/                  # Raw and processed transcripts
-├── embeddings/           # Embedding generation scripts
-├── retriever/            # Vector search and retrieval logic
-├── llm/                  # LLM inference code
-├── rag_pipeline/         # Core RAG pipeline
+├── data/                  # Raw & processed transcripts
+├── embeddings/           # Embedding generation
+├── retriever/            # Retrieval logic
+├── llm/                  # LLM inference
+├── rag_pipeline/         # Core pipeline
 ├── utils/                # Helper functions
-├── app.py                # Main application
+├── app.py                # Entry point
 ├── requirements.txt
 └── README.md
 
