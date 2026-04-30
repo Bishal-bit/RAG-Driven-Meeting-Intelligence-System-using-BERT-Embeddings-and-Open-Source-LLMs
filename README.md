@@ -1,5 +1,5 @@
-🧠 RAG-Driven Meeting Intelligence System
-Using BERT Embeddings & Open-Source LLMs
+<p align="center"> <b>🧠 RAG-Driven Meeting Intelligence System</b> </p>
+<p align="center"> <b>Using BERT Embeddings & Open-Source LLMs</b> </p>
 <p align="center"> <b>Transform meeting transcripts into actionable insights using Retrieval-Augmented Generation</b> </p>
 🚀 Overview
 This project is a RAG-based intelligent meeting assistant that allows users to query meeting transcripts using natural language.
@@ -20,7 +20,6 @@ It combines:
 6. ⚡ Fast retrieval using vector databases
 
 🏗️ Architecture
-![Uploading mermaid-diagram.png…]()
 
 flowchart TD
 ```mermaid
@@ -47,15 +46,14 @@ flowchart TD
 | Data Format  | JSON / Text                  |
 
 📂 Project Structure
-├── data/                  # Raw & processed transcripts
-├── embeddings/           # Embedding generation
-├── retriever/            # Retrieval logic
-├── llm/                  # LLM inference
-├── rag_pipeline/         # Core pipeline
-├── utils/                # Helper functions
-├── app.py                # Entry point
-├── requirements.txt
-└── README.md
+1. data/                 # Raw & processed transcripts
+2. embeddings/           # Embedding generation
+3. retriever/            # Retrieval logic
+4. llm/                  # LLM inference
+5. rag_pipeline/         # Core pipeline
+6. utils/                # Helper functions
+7. requirements.txt
+8. README.md
 
 🔧 Installation
 git clone https://github.com/bishal-bit/RAG-Driven-Meeting-Intelligence-System-using-BERT-Embeddings-and-Open-Source-LLMs.git
