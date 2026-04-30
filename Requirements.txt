@@ -1,0 +1,35 @@
+# Core
+numpy
+pandas
+
+# NLP / Embeddings
+torch
+transformers
+sentence-transformers
+
+# Vector Database
+faiss-cpu
+# or use: chromadb
+
+# RAG Framework (optional but recommended)
+langchain
+langchain-community
+
+# LLM Inference
+accelerate
+bitsandbytes
+scipy
+
+# Tokenization & Utils
+tqdm
+scikit-learn
+
+# API / App (optional depending on your app.py)
+fastapi
+uvicorn
+
+# Environment & Config
+python-dotenv
+
+# Logging / Debugging
+loguru
