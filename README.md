@@ -87,3 +87,15 @@ pip install -r requirements.txt
 1. HuggingFace Transformers
 2. FAISS / ChromaDB
 3. Open-source LLM community
+
+
+## 👤 Author
+
+**Bishal Sarkar**  
+Data Science @ IIT Guwahati  
+
+Passionate about Machine Learning, RAG systems, and real-world AI applications.
+
+- 🔗 GitHub: https://github.com/bishal-bit  
+- 💼 LinkedIn: [https://linkedin.com/in/bishal-sarkar](https://www.linkedin.com/in/bishal-sarkar-b98106217/)  
+- 📧 Email: bishal.sarkar2001@gmail.com
