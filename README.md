@@ -4,17 +4,17 @@ Using BERT Embeddings & Open-Source LLMs
 🚀 Overview
 This project is a RAG-based intelligent meeting assistant that allows users to query meeting transcripts using natural language.
 It combines:
-BERT embeddings for semantic understanding
-Vector search for efficient retrieval
-Open-source LLMs for contextual response generation
+1. BERT embeddings for semantic understanding
+2. Vector search for efficient retrieval
+3. Open-source LLMs for contextual response generation
 👉 Think of it as a ChatGPT for your meetings, grounded in your own data.
 ✨ Features
-🔍 Semantic search over transcripts
-💬 Natural language Q&A
-🧠 Context-aware responses (RAG pipeline)
-📄 Smart chunking of long transcripts
-👥 Speaker-based filtering (optional)
-⚡ Fast retrieval using vector databases
+1. 🔍 Semantic search over transcripts
+2. 💬 Natural language Q&A
+3. 🧠 Context-aware responses (RAG pipeline)
+4. 📄 Smart chunking of long transcripts
+5. 👥 Speaker-based filtering (optional)
+6. ⚡ Fast retrieval using vector databases
 🏗️ Architecture
 ![Uploading mermaid-diagram.png…]()
 
@@ -30,12 +30,15 @@ flowchart TD
     G --> H[Final Answer]
 
 ⚙️ Tech Stack
-Component	Technology
-Embeddings	BERT / Sentence Transformers
-Vector Store	FAISS / ChromaDB
-LLM	LLaMA / Mistral / Falcon
-Backend	Python
-Framework	LangChain / Custom Pipeline
+| Component    | Technology                   |
+| ------------ | ---------------------------- |
+| Embeddings   | BERT / Sentence Transformers |
+| Vector Store | FAISS / ChromaDB             |
+| LLM          | LLaMA / Mistral / Falcon     |
+| Backend      | Python                       |
+| Frameworks   | LangChain / Custom Pipeline  |
+| Data Format  | JSON / Text                  |
+
 📂 Project Structure
 ├── data/                  # Raw & processed transcripts
 ├── embeddings/           # Embedding generation
