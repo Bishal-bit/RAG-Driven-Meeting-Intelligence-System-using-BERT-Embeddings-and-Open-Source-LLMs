@@ -16,6 +16,7 @@ Open-source LLMs for contextual response generation
 👥 Speaker-based filtering (optional)
 ⚡ Fast retrieval using vector databases
 🏗️ Architecture
+![Uploading mermaid-diagram.png…]()
 
 flowchart TD
     A[Meeting Transcripts] --> B[Text Chunking]
