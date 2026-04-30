@@ -83,3 +83,8 @@ Context Recall
 🧠 Fine-tuned domain-specific LLM
 🌐 Knowledge graph integration
 👤 Personalized insights per participant
+
+🙌 Acknowledgements
+1. HuggingFace Transformers
+2. FAISS / ChromaDB
+3. Open-source LLM community
