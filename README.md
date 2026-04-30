@@ -19,15 +19,39 @@ It combines:
 ![Uploading mermaid-diagram.png…]()
 
 flowchart TD
-    A[Meeting Transcripts] --> B[Text Chunking]
-    B --> C[BERT Embeddings]
-    C --> D[Vector Database (FAISS/Chroma)]
-    D --> E[Retriever]
-
-    Q[User Query] --> E
-    E --> F[Relevant Chunks]
-    F --> G[Open Source LLM (LLaMA/Mistral)]
-    G --> H[Final Answer]
+                 ┌────────────────────────┐
+                 │   Meeting Transcripts  │
+                 └──────────┬─────────────┘
+                            │
+                            ▼
+                ┌──────────────────────┐
+                │   Text Chunking      │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │  BERT Embeddings     │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │  Vector Database     │
+                │ (FAISS / Chroma)     │
+                └──────────┬───────────┘
+                           │
+        ┌──────────────────┴──────────────────┐
+        │                                     │
+        ▼                                     ▼
+User Query                          Retrieved Chunks
+        │                                     │
+        └──────────────┬──────────────────────┘
+                       ▼
+            ┌──────────────────────┐
+            │   Open-Source LLM    │
+            │ (e.g., LLaMA/Mistral)│
+            └──────────┬───────────┘
+                       ▼
+                 Final Answer
 
 ⚙️ Tech Stack
 | Component    | Technology                   |
@@ -40,52 +64,43 @@ flowchart TD
 | Data Format  | JSON / Text                  |
 
 📂 Project Structure
-├── data/                  # Raw & processed transcripts
-├── embeddings/           # Embedding generation
-├── retriever/            # Retrieval logic
-├── llm/                  # LLM inference
-├── rag_pipeline/         # Core pipeline
+├── data/                  # Raw and processed transcripts
+├── embeddings/           # Embedding generation scripts
+├── retriever/            # Vector search and retrieval logic
+├── llm/                  # LLM inference code
+├── rag_pipeline/         # Core RAG pipeline
 ├── utils/                # Helper functions
-├── app.py                # Entry point
+├── app.py                # Main application
 ├── requirements.txt
 └── README.md
+
 🔧 Installation
-git clone https://github.com/your-username/RAG-Driven-Meeting-Intelligence-System.git
+git clone https://github.com/bishal-bit/RAG-Driven-Meeting-Intelligence-System-using-BERT-Embeddings-and-Open-Source-LLMs.git
 cd RAG-Driven-Meeting-Intelligence-System
 
 pip install -r requirements.txt
-▶️ Usage
-1. Add Transcripts
-Place meeting transcripts inside:
-/data
-2. Generate Embeddings
-python embeddings/generate_embeddings.py
-3. Run the System
-python app.py
-4. Ask Questions
-Example queries:
-"What decisions were made?"
-"Summarize the discussion by Speaker A"
-"What risks were identified?"
+
 🔄 Workflow
-Input meeting transcript
-Chunk text into smaller segments
-Convert chunks → embeddings using BERT
-Store embeddings in vector database
-User submits query
-Retrieve top-k relevant chunks
-LLM generates final contextual answer
+1. Input meeting transcript
+2. Chunk text into smaller segments
+3. Convert chunks → embeddings using BERT
+4. Store embeddings in vector database
+5. User submits query
+6. Retrieve top-k relevant chunks
+7. LLM generates final contextual answer
+
 📊 Evaluation
-Retrieval Accuracy (Top-K relevance)
-Answer Faithfulness
-Response Latency
-Context Recall
+1. Retrieval Accuracy (Top-K relevance)
+2. Answer Faithfulness
+3. Response Latency
+4. Context Recall
+   
 🔮 Future Improvements
-🎥 Real-time meeting integration (Zoom / Teams APIs)
-🎙️ Speech-to-text pipeline
-🧠 Fine-tuned domain-specific LLM
-🌐 Knowledge graph integration
-👤 Personalized insights per participant
+1. 🎥 Real-time meeting integration (Zoom / Teams APIs)
+2. 🎙️ Speech-to-text pipeline
+3. 🧠 Fine-tuned domain-specific LLM
+4. 🌐 Knowledge graph integration
+5. 👤 Personalized insights per participant
 
 🙌 Acknowledgements
 1. HuggingFace Transformers
