@@ -17,7 +17,16 @@ Open-source LLMs for contextual response generation
 ⚡ Fast retrieval using vector databases
 🏗️ Architecture
 
+flowchart TD
+    A[Meeting Transcripts] --> B[Text Chunking]
+    B --> C[BERT Embeddings]
+    C --> D[Vector Database (FAISS/Chroma)]
+    D --> E[Retriever]
 
+    Q[User Query] --> E
+    E --> F[Relevant Chunks]
+    F --> G[Open Source LLM (LLaMA/Mistral)]
+    G --> H[Final Answer]
 
 ⚙️ Tech Stack
 Component	Technology
